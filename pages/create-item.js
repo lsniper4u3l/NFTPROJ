@@ -3,9 +3,6 @@ import { useState } from 'react'
 import { create as ipfsHttpCliebt} from 'ipfs-http-client'
 import { useRouter } from 'next/router'
 import Web3Modal from 'web3modal'
-
-const client = ipfsHttpCliebt('https://ipfs.infura.io:5001/api/v0')
-
 import {
     nftaddress, nftmarketaddress
 } from '../config.js'
@@ -14,7 +11,9 @@ import NFT from '../artifacts/contracts/NFT.sol/NFT.json'
 import Market from '../artifacts/contracts/NFTMarket.sol/NFTMarket.json'
 import { ImportsNotUsedAsValues } from 'typescript'
 
+
 export default function CreateItem () {
+    const client = ipfsHttpCliebt('https://ipfs.infura.io:5001/api/v0')
     const [fileUrl, setFileUrl] = useState(null)
     const [formImput, updataForminput] = useState({price: '', name: '', description: ''})
     const router = useRouter()
