@@ -19,6 +19,7 @@ export default function Home() {
         loadNFTs()
     }, [])
 
+    
     async function loadNFTs() {
         const provider = new ethers.BrowserProvider(window.ethereum)
         const tokenContract = new ethers.Contract(nftaddress, NFT.abi, provider)
