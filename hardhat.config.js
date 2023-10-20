@@ -3,18 +3,17 @@ const fs = require("fs")
 const privateKey = fs.readFileSync(".secret").toString()
 const projectId = "76f14100d1574f9e91cad402a7ba2832"
 
-
 module.exports = {
   networks: {
     hardhat: {
       chainId: 1337
     },
     mumbai: {
-      url: 'https://polygon-mumbai.infura.io/v3/${projectId}' ,
+      url: `https://polygon-mumbai.infura.io/v3/${projectId}`,  // ให้ใช้ backticks (`) แทน single quotes (')
       accounts: [privateKey]
     },
     mainnet: {
-      url: 'https://polygon-mainnet.infura.io/v3/${projectId}' ,
+      url: `https://polygon-mainnet.infura.io/v3/${projectId}`,  // เช่นเดียวกัน, ใช้ backticks (`) แทน single quotes (')
       accounts: [privateKey]
     }
   },

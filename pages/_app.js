@@ -22,9 +22,9 @@ function MyApp({Component, pageProps}) {
                         My digital Asset
                     </p>
                  </Link>
-                 <Link href="/create-dashboard">
+                 <Link href="/creator-dashboard">
                     <p className='mr-6 text-pink-500'>
-                        Create Dashboard
+                        Creator Dashboard
                     </p>
                  </Link>
             </div>
